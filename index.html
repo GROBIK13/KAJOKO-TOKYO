@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+  <meta name="theme-color" content="#bfe2ec">
+  <title>Судзуко Каёко — Tokyo Life</title>
+  <link rel="stylesheet" href="style.css">
+  <script type="importmap">
+    {
+      "imports": {
+        "three": "https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js"
+      }
+    }
+  </script>
+</head>
+<body>
+  <div id="loading">🌸 Загружаем Токио…</div>
+  <div id="hud">
+    <div class="brand">🌸 TOKYO LIFE <small>Жизнь Каёко</small></div>
+    <div class="stats">
+      <span>🐈 Кошки: <b id="cats">0</b></span>
+      <span>📸 Фото: <b id="photos">0</b></span>
+      <span>🪙 Монеты: <b id="coins">0</b></span>
+    </div>
+  </div>
+  <div id="hint">WASD / стрелки — движение · E — взаимодействие</div>
+  <div id="message" aria-live="polite"></div>
+  <div id="mobile-controls">
+    <div id="stick-area"><div id="stick"></div></div>
+    <button id="action-button">E</button>
+  </div>
+  <button id="reset-button" title="Сбросить прогресс">↻</button>
+  <script type="module" src="game.js"></script>
+</body>
+</html>

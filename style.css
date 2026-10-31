@@ -1,0 +1,18 @@
+*{box-sizing:border-box}
+html,body{margin:0;width:100%;height:100%;overflow:hidden;font-family:system-ui,-apple-system,Segoe UI,sans-serif;background:#bfe2ec;color:#24364b}
+canvas{display:block;touch-action:none}
+#loading{position:fixed;inset:0;display:grid;place-items:center;background:#dff4f4;z-index:20;font-size:22px;font-weight:700}
+#hud{position:fixed;top:12px;left:12px;right:12px;display:flex;justify-content:space-between;align-items:flex-start;gap:10px;pointer-events:none;z-index:3}
+.brand,.stats{background:#ffffffd9;border:1px solid #ffffff;border-radius:15px;padding:9px 13px;box-shadow:0 4px 16px #35566b22}
+.brand{font-weight:900;letter-spacing:1px}.brand small{display:block;font-size:10px;letter-spacing:0;font-weight:600;color:#687d8e}
+.stats{display:flex;gap:13px;font-size:13px}
+#hint{position:fixed;left:50%;bottom:15px;transform:translateX(-50%);background:#ffffffd9;padding:8px 13px;border-radius:12px;font-size:12px;white-space:nowrap;z-index:3;pointer-events:none}
+#message{position:fixed;left:50%;top:85px;transform:translateX(-50%);background:#fff;border-radius:14px;padding:10px 16px;box-shadow:0 5px 20px #20394a33;opacity:0;transition:opacity .2s;z-index:4;text-align:center;max-width:85%;font-weight:650}
+#message.show{opacity:1}
+#mobile-controls{display:none;position:fixed;left:18px;right:18px;bottom:54px;justify-content:space-between;align-items:end;z-index:5;pointer-events:none}
+#stick-area{width:116px;height:116px;border-radius:50%;background:#ffffff70;border:2px solid #fff9;position:relative;pointer-events:auto;touch-action:none}
+#stick{width:48px;height:48px;position:absolute;left:32px;top:32px;border-radius:50%;background:#527f9dcc;border:2px solid white;box-shadow:0 3px 8px #1b3a4a44}
+#action-button{pointer-events:auto;width:66px;height:66px;border-radius:50%;border:2px solid white;background:#e98ba8;color:white;font-size:23px;font-weight:900;box-shadow:0 4px 12px #1b3a4a44;touch-action:manipulation}
+#reset-button{position:fixed;right:14px;bottom:14px;width:36px;height:36px;border:0;border-radius:50%;background:#ffffffd9;color:#456;font-size:22px;z-index:6}
+@media (pointer:coarse){#mobile-controls{display:flex}#hint{bottom:185px;font-size:11px}.stats{gap:7px;font-size:11px}.brand{font-size:12px}}
+@media(max-width:520px){#hud{top:8px;left:8px;right:8px}.stats{padding:8px}.brand{padding:8px}.stats span{white-space:nowrap}}
